@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@import "../style/basic.css";
+
+/**
+ * 事業所案内用CSS
+ * @author Tatsuki Osawa
+ * @date 2015-07-28
+ */
+
+/**
+ * アイキャッチ
+ */
+section.content h3 > img {
+	float: right;
+	margin: 0 0.5em 0.5em;
+	max-width: 50%;
+}
+
+section.content h3 > img[src$="no-image.png"] {
+	width: 10em;
+	height: 12.5em;
+}
+
+section.content table {
+	border-collapse: collapse;
+	margin: 0.5em 1.5%;
+	width: 97%;
+}
+
+section.content > table tr:nth-child(odd) {
+	border-top: 1px solid #AA6;
+	background-color: #DD9;
+}
+
+section.content > table th,
+section.content > table td {
+	line-height: 2;
+}
+
+section.content > table th {
+	text-align: left;
+	font-weight: normal;
+	width: 8em;
+	white-space: nowrap;
+}
+
+section.content > table th:before {
+	content: '★';
+	color: #AA0;
+	font-size: x-small;
+	margin: 0 0.25em;
+	vertical-align: text-top;
+}
+
+section.content > table table th:before {
+	content: none;
+}
+
+section.content > table table tr {
+	border-top-width: 0 !important;
+	border-bottom: 1px dashed #AA6 !important;
+	background-color: inherit !important;
+}
+
+
+/**
+ ご利用についてのお問い合わせ先
+ */
+address.inquire {
+	margin: 1em auto;
+	width: 30em;
+	max-width: 96%;
+	display: block;
+	background-color: #CD9;
+	border-radius: 6px;
+	text-align: left;
+	font-style: normal;
+}
+
+address.inquire .heading {
+	font-size: x-small;
+}
+
+address.inquire strong {
+	border-top: 1px solid #999;
+	font-size: large;
+	font-weight: normal;
+	display: block;
+	padding-top: 0.25em;
+}
+
+address.inquire ruby,
+address.inquire ruby * {
+	display: inline;
+}
+
+address.inquire ruby rp,
+address.inquire ruby rt {
+	font-size: small;
+}
+
+address.inquire code.tel {
+	font-size: large;
+}
+
+address.inquire + * {
+	clear: right;
+}
+
+
+aside.inquire {
+	padding: 2em 0.25em 0.5em;
+	margin: 0.5em auto 0;
+}
+
+aside.inquire p:first-child {
+	float: left;
+ 	padding: 2.5em;
+	margin: 0 1em;
+}
+
+aside.inquire p:first-child a {
+	display: block;
+	font-size: xx-large;
+}
+
+aside.inquire dl {
+	margin: 0 1%;
+}
+
+aside.inquire dl dt {
+	background-image: none;
+	padding: 0;
+	margin: 0.25em 0 0 0;
+}
+
+aside.inquire dl dt:after {
+	content: ':';
+}
+
+aside.inquire dl dd {
+	margin: 0;
+	font-size: x-large;
+}
+
+iframe[src^="https://www.google.com/"] {
+	border: 0;
+	margin: 0.5em 2%;
+}
+
+dd {
+	border-left: 1px solid #C93;
+	margin-left: 0.5em;
+	padding-left: 0.5em;
+}
+
+blockquote {
+	border-left: 3px double #888;
+}

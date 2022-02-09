@@ -1,0 +1,55 @@
+@import "/style/basic.css";
+
+table {
+	border-collapse: collapse;
+	margin: 1em 1em 2em 0;
+}
+
+tr {
+	border: 0 solid #480;
+	border-width: 1px 0;
+}
+
+th {
+	border-right: 1px solid #480;
+	text-align: left;
+	vertical-align: text-top;
+	padding: 0.5em 0;
+}
+
+td {
+	padding: 0.5em;
+}
+
+td > ul {
+	padding: 0;
+}
+
+a.button,
+button[type="submit"] {
+	display: block;
+	margin: 1em auto;
+	padding: 0.5em;
+	width: 12em;
+	font-size: large;
+	border-width: 0;
+	border-radius: 6px;
+	background-color: #480;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+
+a.button:hover,
+a.button:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+	background-color: #8C0;
+	cursor: pointer;
+}
+
+@media print {
+	td > ul {
+		padding-left: 1.5em;
+	}
+}

@@ -1,0 +1,223 @@
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>商品紹介 - NPO法人 多摩草むらの会</title>
+	<link rel="author" href="mailto:info@kusamura.org" />
+	<link rel="stylesheet" type="text/css" href="/style/basic.css" />
+	<style>
+		figure {
+			float: left;
+		}
+		section{
+		    display: flex;
+    		flex-wrap: wrap;
+		}
+	</style>
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <script type="text/javascript" src="/script/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/script/lightbox.js"></script>
+	<script type="text/javascript" src="/script/step_scroll.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+</head>
+<body>
+	<header>
+		<h1>商品紹介</h1>
+		<?= call_html_template('global-header-nav') ?>
+	</header>
+
+	<article>
+		<section>
+			<h2>目玉商品紹介</h2>
+			<p>多摩草むらの会には様々な定番の人気商品があります。ここではその一部を紹介していきたいと思います。ぜひ一度おためしください。</p>
+	    	<ul style="list-style-type:disc;">
+				<li><a href="#kanten">寒天商品</a></li>
+				<li><a href="#shiitake">しいたけ</a></li>
+				<li><a href="#tirashi">ちらし寿司</a></li>
+				<li><a href="#manjyu">まんじゅう</a></li>	
+				<li><a href="#tikutan">竹炭</a></li>
+				<li><a href="#cardcase">ICカードケース</a></li>
+<!--				<li><a href="#hatake">畑deきっちん</a></li> -->
+				<li><a href="#korokke">手作りコロッケ</a></li>
+			</ul>
+	    </section>
+	</article>
+
+
+	<article id="kanten">
+		<section>
+			<h2 style="flex-basis: 100%;">寒天商品</h2>
+			<figure style="flex-basis: 20%;">
+			<a href="./photo/kantendana.jpg" rel="lightbox[group1]"><img src="./photo/kantendana.jpg"  style="width: 180px;"  alt="サンプル写真" class="photo2"></a>
+			<figcaption>寒天商品</figcaption></figure>
+			
+        	<figure style="flex-basis: 20%;"class="photoset" style="margin: 10px;">
+        	<a href="./photo/kanten.jpg" rel="lightbox[group1]"><img src="./photo/kanten.jpg" style="width: 180px;" alt="寒天スープ" class="photo2"></a>
+        	<figcaption>寒天スープ</figcaption>
+        	</figure>
+
+			<div style="flex-basis: 55%;">
+				<p>寒天食品は健康によく、お通じなどにもよいとされています。</p>
+				<p>寒天に緩下作用、整腸作用があることは９０年以上前から知られています</p>
+				<p>寒天商品は医薬品用の寒天の日本で唯一の製造メーカーとして有名な「かんてんぱぱ」から仕入れています。</p>
+				<p>寒天のスープ、寒天ゼリーや、ドレッシングなどが売れ筋商品です。</p>
+				<p>「<a href="/introduction/yumu/">遊夢</a>」、多摩センターバスロータリー「草むらショップ」などでご購入いただけます。</p>				
+				<p>※写真はクリックすると拡大します<p>
+			</div>	
+	    </section>
+	</article>
+
+
+	<article id="shiitake">
+		<section>
+			<h2 style="flex-basis: 100%;">しいたけ</h2>
+			<figure style="flex-basis: 20%;"><img src="./photo/saibai.jpg"  style="width: 160px;"  alt="サンプル写真"><figcaption>栽培風景</figcaption></figure>
+
+			<figure style="flex-basis: 20%;"><img src="./photo/shiitake.jpg"  style="width: 160px;"  alt="サンプル写真"><figcaption>しいたけ</figcaption></figure>
+
+			<div style="flex-basis: 55%;">
+				<p>シイタケは「<a href="/introduction/hatake/">夢畑</a>」で作られています</p>
+				<p>春秋は、よく育ちます。夢畑のしいたけは冬場も暖房で温室管理しているので安定した出荷量があります。</p>
+				<p>夏もビニールハウスにエアコンを設置することで、年中安定した出荷が見込めるようになりそうです。</p>
+				<p>栽培の流れは菌床の搬入後、シイタケのカサが開き切らないうち収穫し、後は浸水・水揚げ・収穫を繰り返します。</p>
+				<p>夢畑のしいたけは第32回八王子農業祭でも優秀賞をいただいています。</p>
+				<p>「<a href="/introduction/yumu/">遊夢</a>」「草むらショップ」「<a href="/intoroduction/kitchen">畑deきっちん</a>」などで販売しています</p>
+
+			</div>
+		</section>
+	</article>
+
+
+	<article id="tirashi">
+		<section>
+			<h2 style="flex-basis: 100%;">ちらし寿司</h2>
+			<figure style="flex-basis: 40%;"><img src="./photo/tirashi.jpg"  style="width: 330px;"  alt="サンプル写真"><figcaption>ちらし寿司</figcaption></figure>
+
+			<div style="flex-basis: 55%;">
+				<p>ちらし寿司は「<a href="/introduction/yumu/">遊夢</a>」で作られ、「<a href="/introduction/yumu/">遊夢</a>」や草むらショップなどで販売されています。</p>
+				<p>材料は椎茸、人参、油揚げ、海苔、錦糸卵、カイワレ大根です。</p>
+				<p>色鮮やかな盛付で見た目も美味しそうに仕上げています。</p>
+				<p>お酢も控え目なので食べやすく、店頭に並べると直ぐに完売してしまいます。</p>
+				<p>月曜日から金曜まで製造、販売しています。</p>
+
+			</div>
+	    </section>
+	</article>
+
+	   
+	<article id="manjyu">
+		<section>
+			<h2 style="flex-basis: 100%;">まんじゅう</h2>
+			<figure style="flex-basis: 20%;">
+			<a href="./photo/manjyu.jpg" rel="lightbox[group1]"><img src="./photo/manjyu.jpg"  style="width: 180px;"  alt="サンプル写真" class="photo2"></a>
+			<figcaption>草むらショップ</figcaption>
+		    </figure>
+			
+        	<figure class="photoset" style="flex-basis: 20%;">
+        	<a href="./photo/sakaman.jpg" rel="lightbox[group1]"><img src="./photo/sakaman.jpg" style="width: 150px;" alt="酒まん" class="photo2"></a>
+        	<figcaption>酒まん</figcaption>
+        	</figure>
+
+			<div style="flex-basis: 55%;">
+				<p>まんじゅうは「<a href="https://social.kusamura.org/">社会福祉法人 草むら グリーンビレッジ</a>」で製造され「<a href="/introduction/yumu/">遊夢</a>」や「草むらショップ」などで売られています。</p>
+				<p>酒まんや、豆大福、草もち、じゃがまんなどがあり、中でも粒あんの酒まんじゅうや草もちが人気です。</p>
+				<p></p>
+				<p>※写真はクリックすると拡大します<p>
+			</div>	
+	    </section>
+	</article>
+
+
+	<article id="tikutan">
+		<section>
+			<h2 style="flex-basis: 100%;">竹炭</h2>
+			<figure style="flex-basis: 20%;"><img src="./photo/makesumi.jpg"  style="width: 300px;"  alt="サンプル写真"><figcaption>製造風景</figcaption></figure>
+
+			<figure style="flex-basis: 20%;"><img src="./photo/takesumi.jpg"  style="width: 160px;"  alt="サンプル写真"><figcaption>竹炭</figcaption></figure>
+	
+			<div style="flex-basis: 55%;">
+				<p>竹炭は「<a href="/introduction/hatake/">夢畑</a>」のヒット商品の１つです。</p>
+				<p>材料は里山の竹林から伐採してきます。</p>
+				<p>伐採した竹は、節の位置を気にしながらノコギリで適切な長さにカットします。</p>
+				<p>さらに、ナタで適切な幅に切り分け、灯油を燃やす熱で、竹炭をいぶし、水分を蒸発させます。</p>
+				<p>水分が抜け切ると、「竹炭」のできあがりです。
+				<p>効果は、浄水、除湿、防臭、除菌で価格は２００円です。</p>
+			</div>				
+	    </section>
+	</article>
+
+
+	<article id="cardcase">
+		<section>
+			<h2 style="flex-basis: 100%;">ICカードケース</h2>
+			<figure style="flex-basis: 20%;">
+			<a href="./photo/cardcase1.jpg" rel="lightbox[group1]"><img src="./photo/cardcase1.jpg"  style="width: 180px;"  alt="サンプル写真" class="photo2"></a>
+		    </figure>
+			
+        	<figure class="photoset" style="flex-basis: 20%;">
+        	<a href="./photo/cardcase2.jpg" rel="lightbox[group1]"><img src="./photo/cardcase2.jpg" style="width: 180px;" alt="カードケース" class="photo2"></a>
+        	<figcaption>ICカードケース</figcaption>
+        	</figure>
+
+			<div style="flex-basis: 55%;">
+				<p>「<a href="introduction/yumeusagi/">夢うさぎ</a>」の商品です。「<a href="introduction/kitchen/">畑deきっちん</a>」店頭や都内「<a href="https://kurumiru.metro.tokyo.jp/">KURUMIRU</a>」各店舗でもご購入いただけます。</p>
+				<p>価格は大サイズが1050円は小サイズが950円です。</p>
+				<p>素材はビニールコーティング生地の革で作成されています。</p>
+				<P>中に仕切りが付いており、小さなポーチとしても使い勝手が良いです。</P>
+				<p>※写真はクリックすると拡大します<p>
+
+			</div>
+	    </section>
+	</article>
+
+	<!--
+	<article id="hatake">
+		<section>
+			<h2 style="flex-basis: 100%;">畑deきっちん商品</h2>
+			<figure style="flex-basis: 20%;">
+			<a href="./photo/DSC_0159.jpg" rel="lightbox[group1]"><img src="./photo/DSC_0159.jpg"  style="width: 180px;"  alt="サンプル写真" class="photo2"></a>
+		    </figure>
+			
+        	<figure class="photoset" style="flex-basis: 20%;">
+        	<a href="./photo/mask.jpg" rel="lightbox[group1]"><img src="./photo/mask.jpg" style="width: 150px;" alt="メニュー" class="photo2"></a>
+        	<figcaption>メニュー</figcaption>
+        	</figure>
+
+			<div style="flex-basis: 55%;">
+				<p>「<a href="/introduction/kitchen/">畑できっちん</a>」の一番人気の商品です</p>
+				<p>寒天商品は寒天商品として有名な「かんてんぱぱ」から仕入れています。</p>
+				<p>寒天ゼリーや、寒天スープなどが売れ筋商品です。</p>
+				<p>※写真はクリックすると拡大します<p>
+			</div>
+	    </section>
+	</article>
+-->
+
+	<article id="korokke">
+		<section>
+			<h2 style="flex-basis: 100%;">手作りコロッケ</h2>
+			<figure style="flex-basis: 20%;">
+			<a href="./photo/korokke.jpg" rel="lightbox[group1]"><img src="./photo/korokke.jpg"  style="width: 180px;"  alt="コロッケ" class="photo2"></a>
+		    </figure>
+
+        	<figure class="photoset" style="flex-basis: 20%;">
+        	<a href="./photo/korokke2.jpg" rel="lightbox[group1]"><img src="./photo/korokke2.jpg" style="width: 180px;" alt="コロッケ" class="photo2"></a>
+        	<figcaption>コロッケ</figcaption>
+        	</figure>
+
+			<div style="flex-basis: 55%;">
+				<p>コロッケは「<a href="/introduction/yumu/">遊夢</a>」の人気商品の１つです。<p/>
+				<p>中身はじゃが芋、豚ひき肉、玉葱、塩、ブラックペッパーです。</p>
+				<p>じゃが芋は皮から茹でることでほくほくとした触感とうま味がとても良いです。</p>
+				<p>また、食べ応えたっぷりの大きさでお客様からとても支持をうけています。</p>
+				<p>※写真はクリックすると拡大します<p>
+			</div>
+		</section>
+	</article>
+
+	<footer>
+		<address>2013 &copy; NPO法人 多摩草むらの会</address>
+		<?= call_html_template('global-footer-nav') ?>
+	</footer>
+</body>
+</html>

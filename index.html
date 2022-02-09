@@ -1,0 +1,209 @@
+﻿<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="東京都多摩市を拠点に障がい者の支援事業を行うNPO、多摩草むらの会のウェブサイト。" />
+        <title>NPO法人 多摩草むらの会</title>
+        <link rel="author" href="mailto:info@kusamura.org" />
+        <link rel="stylesheet" type="text/css" href="/style/basic.css" />
+        <style type="text/css" media="all">
+            header>h1:before
+            {
+                content: "Non Profit Organization Tama-Kusamura ";
+            }
+
+            figure#thumbnail
+            {
+                text-align: center;
+                white-space: nowrap;
+                margin: 0;
+            }
+
+            figure#thumbnail > img
+            {
+                display: inline-block;
+                width: 33.3%;
+            }
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                border-radius: 1em;
+                max-width: 100%;
+            }
+
+            .readmore,
+            .more > * {
+                display: none;
+            }
+            .more > .readmore {
+                display: block;
+                padding: 0.5em 3em;
+                margin: auto;
+            }
+
+        </style>
+        <style type="text/css" media="print">
+            header>h1:before
+            {
+                content: none;
+            }
+            .preface > section > section,
+            figure#thumbnail,
+            iframe
+            {
+                display: none;
+            }
+        </style>
+        <script type="text/javascript" src="/script/step_scroll.js"></script>
+        <script type="text/javascript" src="/script/random_thumbnail.js"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', function() {
+                Array.from(document.querySelectorAll('.more')).forEach(function(m){
+                    var btn = document.createElement('button');
+                    btn.classList.add('readmore');
+                    btn.textContent = '続きを読む';
+                    btn.addEventListener('click', show);
+                    m.insertBefore(btn, m.firstChild);
+                });
+                function show(e) {
+                    e.target.parentNode.classList.remove('more');
+                }
+            });
+        </script>
+        <!--[if lt IE 9]><script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+    </head>
+    <body>
+        <header>
+            <h1>NPO法人 多摩草むらの会</h1>
+            <?= call_html_template('global-header-nav') ?>
+        </header>
+        <figure id="description">
+            <p>多摩草むらの会では、心の病を持つ精神障がい者が安心して自立した生活ができるよう、就労支援、自立生活支援、相談支援など、様々な形で支援事業を展開しています。</p>
+        </figure>
+
+        <!--
+        <article>
+            <section>
+                <h2>クラウドファウンディング終了のご報告: ご支援いただいた皆様へ</h2>
+                <p class="by"><cite>認定NPO法人多摩草むらの会 代表理事　風間　美代子</cite></p>
+                <p>当法人へのご支援誠にありがとうございました。</p>
+                <p>お陰様で、1月末に募集が終了し、合計48名の皆様から797,500円のご寄付を頂きました。</p>
+                <p>まずはご支援して頂いた48名様に厚く御礼申し上げます。</p>
+                <p>ご支援、本当にありがとうございます。</p>
+                <div class="more">
+                    <p>またご支援だけでなく、応援のメッセージやSNS上でシェアなどのご支援を頂いた方々にもお礼を申し上げます。</p>
+                    <p>今回ご支援いただいた方の中にも、まだ面識がない方も多数いらっしゃいます。</p>
+                    <p>出来る事なら、直接お会いして、感謝の気持ちを伝えたい思いです。</p>
+                    <p>本当にありがとうございます。</p>
+                    <p>今回のプロジェクトを通じて、いろいろな方々から暖かいお気持ちは強く受け取ることができました。</p>
+                    <p>障害者支援の活動が暖かく受け入れられている事の証だと思います。</p>
+                    <p>初めての試みで、どの様にお礼申し上げればよいのか不案内でご迷惑をおかけしているのではないかと不安な部分もあります。</p>
+                    <p>認定NPO法人多摩草むらの会として、皆様のご支援を力に明日に向かって進みたいと思います。</p>
+                    <p>引き続き応援、支援お願いいたします。</p>
+                    <p>尚、認定NPO法人多摩草むらの会では年間を通じてご寄付を受け付けておりますので、是非ご連絡ください。<a href="mailto:info@kusamura.org">（info@kusamura.org）</a></p>
+                    <p>ありがとうございました。</p>
+                    <section>
+                        <h3>ご参考</h3>
+                        <p>皆様のご寄付は、所得控除又は税額控除のいずれかを適用することが出来ます。</p>
+                        <p>確定申告の際に「寄附金控除」か「寄附金特別控除」のどちらかを選択することになります。</p>
+                        <p>控除に含まれる額は確定申告の前年の1/1～12/31に認定NPOが受領された分が対象となりますので、今回の場合は当法人の受領日がすべて、令和3年3月末となりますので、令和3年度の控除として取り扱う事となります。当法人では、受領日以降に領収書等の寄附金特別控除に必要な書類をお送りします。</p>
+                    </section>
+                </div>
+            </section>
+        </article>
+        -->
+
+        <!--
+        <article>
+            <section>
+                <h2><a type="application/pdf" href="/files/hv20220108.pdf">1月ヒアリング・ヴォイシズのお知らせ</a></h2>
+                <p>新型コロナウイルス感染の収束の予測ができないために、<del datetime="2022-01-06">夢来とオンラインを併用した「ハイブリット形式」での開催を予定しております。</del><ins datetime="2022-01-06">夢来での開催は中止、ZOOMでの開催となりました。</ins>今回も日本国内各地をむすんで行います。</p>
+                <ul>
+                    <li>日時：1月8日（土）  14:00～16:00</li>
+                    <li>参加方法：Zoom ビデオコミュニケーションズで行います。</li>
+                </ul>
+                <ol>
+                    <li>お手持ちの PC、スマートフォンに<a href="https://us02web.zoom.us/j/88362336889?pwd=T2xMQ29CRFlwb0JJUGtGdDdxamJsQT09">Zoom のアプリケーション</a>をインストールします。</li>
+                    <li>ミーティングに参加をクリックします。</li>
+                    <li>ミーティング ID を入力します。<strong>（ID：<code>883 6233 6889</code>）</strong></li>
+                    <li>ミーティングパスワードを入力します。<strong>（パスワード：<code>128959</code>）</strong></li>
+                </ol>
+                <p>※アプリの利用料は無料ですが、ダウンロードや利用時にかかる<em>パケット通信料は自己負担</em>となりますので、注意してください。</p>
+                <del datetime="2022-01-06"><p>※ネット環境が無い方は<a href="/introduction/muku/">夢来</a>での参加が可能です。</p></del>
+                <p>問い合わせ先：<cite>シャル夢  丹澤・櫛田 <code class="tel">042-689-6713</code></cite></p>
+            </section>
+        </article>
+        -->
+
+        <!--
+        <article>
+            <section>
+                <h2><a type="application/pdf" href="/files/fs20210630.pdf">フリースペース草むらの集い 今後の開催方針のお知らせ</a></h2>
+                <p>メンバー及びその家族の憩いの場として運営しています「フリースペース草むらの集い」ですが、当面の間は休会とします。</p>
+            </section>
+        </article>
+        -->
+
+
+        <article>
+            <section>
+                <h2>理念</h2>
+                <blockquote>
+                    <p>力の弱い野兎が遠くのニンジン畑まで出かけて行ってニンジンを手に入れるためには、途中で出会う外敵から身を隠せる”草むら”が必要なのです。</p>
+                    <p>もし”草むら”があれば、うさぎは自分の巣穴と”草むら”の間を行ったり来たりしながら、その”草むら”が安心できる場になれるようにします。</p>
+                    <p>一旦”草むら”が安心できる場となれば、今度はその”草むら”を拠点にして、更に広い世界を探索できるようになるのです。</p>
+                    <p>このような”草むら”が出来れば、遠くのニンジン畑へも行けるようになるのです。</p>
+                </blockquote>
+                <p>上記文は、精神科医中井久夫先生のものであり、また当会が平成10年度に発足して以来、理念としているものです。</p>
+                <p>「はたらく」とは「夢を追うこと」と思い、福祉の枠を超え、障がいがあっても依存するだけでなく誰かの役に立ちたいと願う訓練生とともに、楽しく夢を追い続けられる法人を目指しています。</p>
+            </section>
+        </article>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WTII9JCITls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <article>
+            <section>
+                <h2><a href="/bulletin/2022-01">草むら通信2022年1月号ウェブ版</a></h2>
+                <p>多摩草むらの会の情報を毎月お届けする「草むら通信」より、いくつかのトピックを抜粋してご紹介しています。</p>
+                <h3>目次</h3>
+                <dl class="toc">
+                    <dt>巻頭言</dt>
+                    <dd><a href="/bulletin/2022-01#preface">初富士に願いを込めて</a> <cite>代表理事　風間美代子</cite></dd>
+                    <dt>寄稿　医療のおはなし</dt>
+                    <dd><a href="/bulletin/2022-01#medic">統合失調症治療薬「クロザピン（クロザリル）」ってどんな薬？</a> <cite>恩方病院薬剤科　薬剤師　赤池 志保理、監修：恩方病院薬剤科長　岩澤 恭介</cite></dd>
+                    <dt>トピックス</dt>
+                    <dd><a href="/bulletin/2022-01#t1">メンバーお楽しみ交流会開催しました</a></dd>
+                </dl>
+            </section>
+        </article>
+        
+        <article>
+            <section>
+                <h2>第三者評価受審結果</h2>
+                <ul>
+                    <li><a href="http://www.fukunavi.or.jp/fukunavi/controller?actionID=hyk&cmd=hyklst&S_MODE=name&SVCDBR_CD=&MLT_AREA=&STEP_SVCSBRCD=&DISP_YR=&SVCDBRCD=&SCHSVCSBRCD=&SVCSBRCDALL=&NAME=&AREA1=&AREA2=&AREA3=&HYK_YR=&SCHHYK_YR=&HYK_ID1=&HYK_ID2=&HYK_ID3=&HYK_ID4=&HYK_ID5=&JGY_CD1=&JGY_CD2=&JGY_CD3=&JGY_CD4=&JGY_CD5=&MODE=multi&ROW=&MLT_SVCSBR_CD1=&MLT_SVCSBR_CD2=&MLT_SVCSBR_CD3=&MLT_SVCSBR_CD4=&MLT_SVCSBR_CD5=&MLT_SVCSBR_CD6=&MLT_SVCSBR_CD7=&MLT_SVCSBR_CD8=&COLOR_FLG=&COLOR_HYK_ID=&BEFORE_FLG=&TELOPN001_NO1=&TELOPN002_NO1=&TELOPN003_NO1=&TELOPN001_NO2=&TELOPN002_NO2=&TELOPN002_NO3=&TELOPN001_NO3=&TELOPN003_NO2=&TELOPN003_NO3=&H_NAME=%E5%A4%9A%E6%91%A9%E8%8D%89%E3%82%80%E3%82%89%E3%81%AE%E4%BC%9A&J_NAME=">当法人に対する福祉サービス第三者評価の受審結果</a></li>
+                </ul>
+                <p>なお第三者評価そのものについては、評価結果公表元の<a title="公益財団法人東京都福祉保健財団 とうきょう福祉ナビゲーション" href="http://www.fukunavi.or.jp/fukunavi/">福ナビ</a>ウェブサイト内に<a href="http://www.fukunavi.or.jp/fukunavi/hyoka/outline.htm">解説のページ</a>が用意されておりますのでご参照ください。</p>
+            </section>
+        </article>
+
+        <article>
+            <section>
+                <h2>就労継続支援A型事業所のスコア表による評価点の公表</h2>
+                <p>令和3年度より就労継続支援A型事業所は、運営状況をスコア方式により評価し、その結果を公表することになりました。</p>
+                <p>当事業所につきましては、下記のとおりとなっております。</p>
+                <ul>
+                    <li><a type="application/pdf" href="./files/score20210409.pdf">令和2年度 就労継続支援A型事業所におけるスコア表</a></li>
+                    <li><a type="application/pdf" href="./files/score20210409_2-2.pdf">令和2年度 就労継続支援A型事業所におけるスコア表(実績 I～IV)</a></li>
+                </ul>
+            </section>
+        </article>
+
+        <footer>
+            <address>2013 &copy; NPO法人 多摩草むらの会</address>
+            <?= call_html_template('global-footer-nav') ?>
+        </footer>
+    </body>
+</html>

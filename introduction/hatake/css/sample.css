@@ -1,0 +1,199 @@
+.swiper-container{
+	width: 512px;
+}
+.flex-container{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+
+/* 似顔絵アイコンの縁取り */
+img.icon{
+	border-radius: 8px;
+}
+
+/* 吹き出し　左寄せ */
+.balloon5 {
+	width: auto ;
+	margin: 1.5em 0;
+	/* 表示崩れ対応
+	overflow: visible;
+	z-index: ;
+	*/
+	overflow: hidden;
+	padding-left: 0em;
+	margin-right: 1.5em;
+}
+
+.balloon5 .faceicon {
+	float: left;
+	clear: right;
+	width: 4em;
+	margin-left: 32px;
+	margin-right: -60px;
+}
+
+.balloon5 .faceicon img{
+	width: 100%;
+	height: auto;
+	border: solid 3px khaki;
+	border-radius: 50%;
+}
+.says {
+	display: inline-block;
+	position: relative; 
+	margin: 5px 0 0 105px;
+	padding: 12px 12px;
+	border-radius: 12px;
+	background: khaki;
+	max-width: 23em;
+}
+
+.says:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 18px; 
+	left: -24px;
+	border: 12px solid transparent;
+	border-right: 12px solid khaki;
+}
+
+.says p {
+	margin: 0;
+	padding: 0;
+}
+
+/* 吹き出し　右寄せ */
+
+.balloon6 {
+	clear: both;
+	overflow: visible;
+	padding-right: 2em;
+}
+
+.balloon6 .faceicon {
+	float: right;
+	margin-left: 2em;
+	width: 4em;
+}
+
+.balloon6 .faceicon img{
+	width: 100%;
+	height: auto;
+	border: solid 3px #d7ebfe;
+	border-radius: 50%;
+}
+
+.says_right {
+	width: auto;
+	float: right;
+	clear: left;
+	display: inline-block;
+	position: relative; 
+	margin: 5px 0px 0 0px;
+	padding: 17px 13px;
+	border-radius: 12px;
+	background: #d7ebfe;
+	max-width: 23em;
+}
+
+.says_right:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 18px; 
+	right: -24px;
+	border: 12px solid transparent;
+	border-left: 12px solid #d7ebfe;
+}
+
+.says_right p {
+	margin: 0;
+	padding: 0;
+}
+
+div.interval{
+	border-left: thin solid;
+}
+/* tooltip による用語説明 */
+
+
+span.term{
+	visibility: hidden;
+	border-radius: 5px ;
+	background-color:yellowgreen ;
+	position: absolute;
+	padding: 10px;
+	width: 17em;
+	height: auto;
+	z-index: 128;
+
+}
+
+span.term::before{
+	content: '';
+	position: absolute;
+	left: -15px;
+	top: -px;
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 15px solid yellowgreen;
+	border-bottom: 15px solid transparent;
+
+}
+
+div.event{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* タイムライン試作品　インデント調整 */
+.box{
+	width: 240px;
+}
+
+.clock{
+	height: 64px;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+.clock > img{
+	height: 64px;
+	margin-right: 32px;
+}
+
+.timeline > p, .timeline > ul, .ui-tabs-vertical, div.event{
+	margin-left: 64px;
+	padding-left: 2.5em;
+	width: auto; 
+	border-left: thin solid;
+
+}
+/*
+ * 一日の流れ　タイムライン
+ * Tab(jQuery)
+ */
+.timeline{
+	min-height: 5em;
+}
+.timeline > h3{
+	font-size: x-large;
+}
+.oclock{
+	height: 3em;
+	margin-right: 1em;
+
+}
+h3{
+	clear: both;
+}
+.timeline > ul{
+	clear: both;
+}
+

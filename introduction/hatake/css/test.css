@@ -1,0 +1,96 @@
+/*=
+ * スライドメニュー
+ *
+ */
+.header-contents {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*---------- #menu ----------*/
+section{
+	clear: none;
+}
+section.content table{
+	width: auto;
+}
+#slideL {
+	z-index: 100;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: ;
+	bottom: 0px;
+	width: 10px;
+	height: auto;
+	float: ;
+	padding: 0 40px 0 0;
+	background: lightgray;
+	opacity: 0.9;
+
+}
+#slideL .slide-inner {
+	bottom: 0;
+	height: auto;
+	overflow: auto;
+	overflow-x: hidden;
+	background: gray;
+}
+
+body.double-column > article{
+	padding-left: 0em;
+}
+body.double-column > article > section{
+	padding-left: 4em;
+}
+
+.balloon5 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.balloon5 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon5 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+
+.balloon5 .chatting {
+  width: 100%;
+}
+
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+
+.says p {
+  margin: 0;
+  padding: 0;
+}

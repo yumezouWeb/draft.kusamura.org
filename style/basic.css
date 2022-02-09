@@ -1,0 +1,1033 @@
+﻿@charset "utf-8";
+
+/*
+ 多摩草むらの会 ベーシックスタイル
+ author:
+  Tatsuki Osawa
+ created:
+  2009-09-30
+ modified:
+  2021-01-12 .sub-titleを追加
+  2017-01-30 double-columnページの幅の狭い端末向け記述を追加
+  2016-07-12 印刷時のa[href]:afterが長すぎるので解除
+  2014-03-27 figcaptionのフォントサイズ変更
+  2014-01-06 header nav.global以下の深い階層にもスタイル指定
+  2013-12-26 figure.verticalを追加
+  2013-10-24 figure.visual imgのwidth指定 -> max-width指定に変更
+  2013-10-11 dl.visual_termsを作成
+  2013-06-17
+*/
+
+/* リンク */
+a             { text-decoration: underline; }
+a:link        { color: blue; }
+a:link img    { outline: 0.25em double blue; }
+
+a:visited     { color: purple; }
+a:visited img { outline: 0.25em double purple; }
+
+a:hover,
+a:focus,
+a:active      { color: #060; }
+a:hover img,
+a:focus img,
+a:active img  { outline: 0.25em double #060; }
+
+a:focus,
+a:active      { outline: 1px solid #060; }
+
+a:after
+{ color: #FFF;
+  margin-left: 0.25em;
+  padding: 0.1em 0.25em;
+  vertical-align: 0.1em;
+  line-height: 1;
+  font-size: 80%;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+a:link:after
+{
+	background: #009;
+	border-color: #00F;
+}
+a:visited:after
+{
+	background: #909;
+	border-color: #F0F;
+}
+a:hover:after,
+a:focus:after,
+a:active:after
+{
+	background: #060;
+	border-color: #090;
+}
+
+/* PDF */
+a[type="application/pdf"]:after
+{
+	content: "PDF";
+}
+
+a[href^="http"]:hover:after,
+a[href^="http"]:focus:after
+{
+	background-color: #090;
+}
+
+
+/* font */
+strong
+{
+	font-weight: bold;
+}
+
+pre, code, kbd, input, button, textarea
+{
+	font-family: Consolas, monospace;
+}
+
+pre em, code em, pre var, code var
+{
+	font-style: italic;
+}
+
+
+/**
+ * html5 elements box layout
+ */
+header, footer, section, article, nav, aside
+{
+	display: block;
+}
+
+/**
+ * 	縦並び画像
+ */
+figure.vertical
+{
+	float: right;
+}
+
+figure.vertical img
+{
+	display: block;
+	margin: 0 0 0.5em 0.5em;
+}
+
+
+/* blocks */
+address, hr
+{
+	clear: both;
+}
+
+hr
+{
+	margin: 1em 1.5% 0.5em;
+	border-width: 0;
+}
+
+/* phrase */
+sup, sub
+{
+	font-size: x-small;
+	line-height: 1;
+}
+
+img, big, small
+{
+	vertical-align: middle;
+}
+
+em
+{
+	color: #C00;
+	font-style: normal;
+}
+
+big
+{
+	font-size: 125%;
+	line-height: 0.8;
+}
+
+small
+{
+	font-size: 80%;
+	line-height: 1.25;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+.visual_terms dt,
+.visual_terms dd
+{
+	margin: 0;
+	padding: 0;
+	background-image: none;
+}
+.visual_terms dt
+{
+	font-weight: bold;
+	margin: 1em 0 0.5em;
+	line-height: 1;
+}
+
+section,
+.visual_terms dt
+{
+	clear: left;
+}
+
+.visual_terms dt figure
+{
+	display: inline;
+}
+
+.visual_terms dt figure img
+{
+	float: left;
+	margin: 0 1em 1em 0;
+	width: 12em;
+}
+
+.visual_terms dt figcaption
+{
+	display: inline;
+}
+
+
+/**
+ * 	ルビ
+ */
+
+/**
+ * 	グローバルヘッダ
+ */
+header h1
+{
+	font-size: xx-large;
+}
+
+/**
+ *　日付表記他、見出し内情報
+ */
+h2 time,
+h2 .sub-title {
+	font-size: small;
+	display: block;
+}
+
+.by {
+	text-align: right;
+}
+
+/**
+ * ぱんくず
+ */
+nav.breadcrumb {
+	position: relative;
+	z-index: 2;
+	border: 3px solid #EFD;
+	border-bottom-width: 0;
+	border-radius: 6px 6px 0 0;
+	padding: 0.75em 1%;
+	margin-top: 1em;
+	background-color: #FFF;
+}
+
+nav.breadcrumb + article {
+	margin-top: 0;
+	padding: 0 0 1em 0;
+	border-top: 0;
+	border-radius: 0 0 6px 6px;
+}
+
+body.double-column > article {
+	padding-left: 15em;
+}
+
+body.double-column h1 small {
+	display: block;
+	font-size: medium;
+}
+
+body.double-column h1 small:before {
+	content: "[";
+}
+body.double-column h1 small:after {
+	content: "]";
+}
+
+body.double-column section {
+	padding: 0;
+}
+
+body.double-column h2 {
+	clear: none;
+	padding: 0.5em 1.5em;
+	margin: 0 0 0 -3px;
+	background: none #CD9;
+	border-top: 6px solid #060;
+}
+
+section.toc {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	width: 14em;
+}
+
+section.toc nav {
+	font-size: medium;
+}
+
+section.toc ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+section.toc ul > li {
+	margin: 0 0 0.25em;
+	border-top: 1px dashed #999;
+}
+
+section.toc ul > li:first-child {
+	border-top-width: 0;
+}
+
+section.toc ul > li:before {
+	display: inline-block;
+	font-family: monospace;
+	content: '>';
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	outline: 1px dotted #369;
+	margin: 1em;
+}
+
+section.toc em {
+	color: inherit;
+	font-weight: bold;
+}
+
+section.content {
+	margin: 0 -3px 0 0;
+	min-width: 14em;
+}
+
+section.content h2 {
+	margin-bottom: 0.75em;
+}
+
+
+
+/**
+ * 	現行の事業所紹介データ用
+ */
+.introduction article > section
+{
+	clear: right;
+}
+
+.introduction aside
+{
+	width: 20em;
+	float: right;
+	margin: 0 1em 1em 1em;
+}
+
+.introduction aside dl
+{
+	padding: 0;
+	box-shadow: 1px 1px 2px #666;
+	font-size: smaller;
+}
+
+.introduction aside dt
+{
+	padding: 0.5em;
+	margin: 0;
+	border: 0;
+	background: #EFD url(images/texture2.png);
+}
+
+.introduction aside dd {
+	padding: 0.5em;
+	margin: 0;
+	border-top: 1px dotted #AC9;
+	background: #FFF;
+}
+
+figure.visual
+{
+	margin: 1em 1.5%;
+	text-align: center;
+}
+
+figure.visual > img,
+figure.visual > figure,
+.introduction section figure>img
+{
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
+}
+
+@media screen,tv,projection,handheld {
+
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	header h1,
+	article,
+	footer,
+	body > figure,
+	body > form
+	{
+		border: 3px solid #EFD;
+		border-radius: 6px;
+		background-color: #FFF;
+		box-shadow: 6px 4px 3px #030;
+	}
+
+	html
+	{
+		line-height: 1.6;
+		font-size: medium;
+		color: #000;
+		background-color: #006600;
+		background-image: url(images/back_sample01.jpg);
+		font-family: meiryo, sans-serif;
+	}
+
+	body
+	{
+		max-width: 60em;
+		margin: auto;
+		padding: 1em;
+	}
+
+	/**
+	 * 	外部リンクに付加する目印
+	 */
+	a[href^="http:"]:after,
+	a[href^="https:"]:after {
+		content: '→';
+		font-weight: bold;
+		color: white;
+		background: #999;
+		border: 0;
+		height: 1em;
+		width: 1em;
+		padding: 0.25em;
+		text-align: center;
+		margin: 0 0.25em;
+		display: inline-block;
+	}
+
+	h1,h2,h3,h4,h5,h6
+	{
+		padding: 0.1em 1.5%;
+		margin: 0.1em 0;
+		text-shadow: 0 0 1px #030;
+		font-weight: normal;
+	}
+
+	section h2
+	{
+		font-size: 140%;
+		padding: 0;
+		margin: 0.125em 1.5%;
+		clear: both;
+	}
+
+	nav
+	{
+		font-size: smaller;
+	}
+
+	p,ul,ol,dl
+	{
+		padding: 0.5em 1.5%;
+	}
+
+	dd,ul,ol,blockquote
+	{
+		margin-left: 2em;
+	}
+
+	dl
+	{
+		margin-left: 1em;
+	}
+
+	dt
+	{
+		background: url(images/felt_carrot.png) left center no-repeat;
+		background-size: 0.75em;
+		padding-left: 1em;
+		margin-top: 0.5em;
+	}
+
+	blockquote
+	{
+		margin: 0.5em 0.5em 0.5em 2em;
+	}
+
+	blockquote[cite]:after
+	{
+		margin: 0 1.5%;
+		content: attr(cite) " より引用";
+	}
+
+	q
+	{
+		color: #366;
+	}
+
+	cite
+	{
+		color: #663;
+	}
+
+	address
+	{
+		display: block;
+	}
+
+	del,del *
+	{
+		color: silver !important;
+	}
+
+	ins
+	{
+		background-color: #CDC;
+		text-decoration: none;
+	}
+
+	figure
+	{
+		margin: 1em auto;
+		overflow: hidden;
+	}
+
+	figure figcaption
+	{
+		text-align: center;
+		margin: 0.5em 0;
+		font-size: smaller;
+	}
+
+	figure > img
+	{
+		display: block;
+		margin: 0 auto;
+		width: auto;
+		height: auto;
+	}
+
+	table,pre
+	{
+		margin: 0.5em auto;
+		max-width: 100%;
+	}
+	caption
+	{
+		margin-top: 0.5em;
+	}
+	th, td
+	{
+		padding: 0.25em;
+	}
+
+	fieldset
+	{
+		margin: 1em 1%;
+		padding: 0.5em 1em 1em 1em;
+		border: 1px solid #999;
+		border-radius: 6px;
+	}
+
+	fieldset > label
+	{
+		border-radius: 3px;
+	}
+
+	legend
+	{
+		padding: 0 0.5em;
+	}
+
+	label:hover
+	{
+		background-color: #DDD;
+		transition: background-color 1s ease-out;
+	}
+
+	option
+	{
+		padding: 0 0.25em;
+	}
+
+	abbr
+	{
+		margin: 0 0.25em;
+	}
+
+	dfn
+	{
+		color: #660;
+		letter-spacing: 0.125em;
+	}
+
+	dfn:before,
+	dfn:after
+	{
+		content: "'";
+		font-size: smaller;
+		vertical-align: text-top;
+		margin: 0 0.125em;
+	}
+
+	address
+	{
+		padding: 0 1.5%;
+	}
+
+	hr
+	{
+		margin: 1em 1.5% 0.5em;
+		border-top: 0.5em dotted #E0E0E0;
+	}
+
+	var
+	{
+		margin: 0 1px;
+	}
+
+	kbd
+	{
+		margin: 0 0.1em;
+		padding: 0 0.2em;
+	}
+
+	pre
+	{
+		border-color: #ACC;
+		background-color: #FFF;
+		padding: 0.5em 1em;
+		overflow: auto;
+	}
+	pre samp,pre code,pre var
+	{
+		border-width: 0;
+		margin: 0;
+		padding: 0;
+	}
+	kbd
+	{
+		border-color: #886;
+		background-color: #ECECEA;
+	}
+	code
+	{
+		border-color: #BDD;
+	}
+
+	/**
+	 * 	ヘッダ
+	 */
+	header h1
+	{
+		color: #000;
+		text-align: left;
+		border-bottom-left-radius: 0;
+		line-height: 1.25;
+		padding: 1em 2%;
+		margin: 0.5em 0 0;
+		background: #FFF url(images/image3037.png) no-repeat;
+		background-size: contain;
+		background-position: right bottom;
+	}
+
+	header h1:before
+	{
+		content: "NPO法人 多摩草むらの会";
+		display: block;
+		text-align: left;
+		font-size: x-small;
+		margin: 0.5em 0.25em;
+	}
+
+	/**
+	 * 	グローバルナビゲーション化させる。プルダウンのCSS実装。
+	 */
+	header nav.global
+	{
+		margin: 0 0 1em;
+	}
+
+	header nav.global ul
+	{
+		margin: 0;
+	}
+
+	header nav.global > ul
+	{
+		padding: 0;
+	}
+
+	header nav.global > ul > li
+	{
+		display: inline-block;
+		width: 10em;
+	}
+
+	header nav.global > ul > li > a,
+	header nav.global > ul > li > .current
+	{
+		text-align: center;
+		display: block;
+		padding: 0.25em;
+		text-shadow: 0 0 2px #000;
+		line-height: 1.5;
+		color: #FFF !important;
+		border: 0.1em solid #F0FFE0;
+		border-top-width: 0;
+		box-shadow: 6px 4px 3px #030;
+	}
+
+	header nav.global > ul > li > a
+	{
+		background-color: #080;
+		text-decoration: none;
+	}
+
+	header nav.global > ul > li > .current
+	{
+		background-color: #C90;
+	}
+
+	/**
+	 * 	プルダウンされるサブメニュー
+	 */
+	header nav.global > ul > li > ul
+	{
+		opacity: 0;
+		z-index: -1;
+		position: absolute;
+		background: white;
+		box-shadow: 6px 4px 3px #030;
+		padding: 0.5em 0;
+		width: inherit;
+		transition: opacity 0.5s ease-out;
+	}
+
+	header nav.global > ul > li > ul > li
+	{
+		margin: 0.25em 0.5em 0.25em 2em;
+	}
+
+	header nav.global > ul > li:hover > ul,
+	header nav.global > ul > li > *:focus + ul
+	{
+		opacity: 0.9;
+		z-index: 100;
+	}
+
+	header nav.global > ul > li:hover > a
+	{
+		background-color: #CF9;
+		transition: background-color 1s ease-out;
+	}
+
+	header nav.global > ul > li > *:before
+	{
+		margin-right: 0.25em;
+	}
+
+	header nav.global > ul > li > a:before
+	{
+		content: "■";
+		color: #FFF;
+		text-shadow: 2px 2px 0 #9C6;
+	}
+
+	header nav.global > ul > li:hover > a:before,
+	header nav.global > ul > li > a:focus:before
+	{
+		color: #060;
+		transition: color 1s ease-out;
+	}
+
+	/**
+	 * 	ナビゲーションの階層が深い場所
+	 */
+	header nav.global ul ul ul
+	{
+		margin: 0.5em 0 0.5em 1em;
+		padding: 0;
+		font-size: smaller;
+	}
+
+	header nav.global ul ul ul ul
+	{
+		margin: 0;
+		list-style-type: none;
+		font-size: 100%;
+	}
+
+	/**
+	 * 	コンテンツ
+	 */
+	article
+	{
+		margin: 1em 0;
+		padding: 0.5em;
+		position: relative;
+		z-index: 1;
+	}
+
+	article section
+	{
+		padding: 0.5em 0;
+	}
+
+	article h2
+	{
+		font-size: x-large;
+		line-height: 1.25;
+		background: url(images/felt_rabbit.png) left center no-repeat;
+		background-size: 1.5em;
+		padding: 0.25em 0 0.25em 2em;
+	}
+
+	article h3:before
+	{
+		content: "■";
+		opacity: 0.8;
+		color: #080;
+		font-size: medium;
+		display: inline-block;
+		margin-right: 0.75em;
+		vertical-align: top;
+		text-shadow: 0.25em 0.25em 0.1em #4B4;
+	}
+
+	article:after {
+		content: "\A";
+		display: block;
+		clear: both;
+	}
+
+	article address
+	{
+		text-align: right;
+	}
+
+	/** DL要素の目次 */
+	.toc > dt {
+		border-top: 1px dotted #888;
+		padding-top: 0.5em;
+		margin-top: 0.5em;
+	}
+	.toc > dt:first-child {
+		border-top-width: 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.toc > dd {
+		padding-left: 1em;
+		margin-left: 0;
+	}
+	.toc > dd:before {
+		content: "♪";
+		color: #080;
+		font-style: italic;
+		margin-right: 0.25em;
+	}
+
+	/**
+	 * 	事業所紹介
+	 */
+	.introduction article > section
+	{
+		clear: right;
+	}
+
+
+	figure.visual
+	{
+		margin: 1em 1.5%;
+		text-align: center;
+	}
+
+	figure.visual > img,
+	figure.visual > figure,
+	.introduction section figure>img
+	{
+		display: inline-block;
+		width: 32%;
+		vertical-align: top;
+	}
+
+	/**
+	 * 	フッタ
+	 */
+	body > footer
+	{
+		margin-bottom: 2em;
+		padding: 0.5em 1em;
+		background-image: url(images/bg_foot.png);
+		background-size: 10%;
+		background-repeat: repeat-x;
+		background-position: center bottom;
+		text-align: center;
+		text-shadow: 0 0 2px #666;
+	}
+
+	footer nav li
+	{
+		display: inline;
+	}
+
+	footer nav li
+	{
+		margin: 0 0.5em;
+	}
+
+	footer nav li > a
+	{
+		position: relative;
+		z-index: 2;
+	}
+
+
+}
+
+/**
+ * プリントする
+ */
+@media print
+{
+
+	h1
+	{
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+
+	address
+	{
+		page-break-before: avoid;
+	}
+
+	header nav.global,
+	nav.breadcrumb,
+	section.toc,
+	footer ul,
+	.pr-fb
+	{
+		display: none;
+	}
+
+	body.double-column > article {
+		padding-left: 0;
+	}
+
+	figure
+	{
+		margin: 0;
+	}
+
+	hr
+	{
+		border-top: 0.25mm dashed #999;
+	}
+
+}
+
+
+/**
+ * 	scriptから挿入されるスクロールトリガーボタン
+ */
+button.scroll_trigger
+{
+	display: none;
+}
+
+
+/**
+ * 	handheldは対象外とする
+ */
+@media screen,tv,projection {
+
+	button.scroll_trigger
+	{
+		display: inline-block;
+		position: fixed;
+		z-index: 10;
+		left: 1%;
+		bottom: 0.5em;
+		opacity: 0.5;
+		padding: 0.5em;
+		font-size: larger;
+		border-radius: 6px;
+		text-shadow: 1px 1px 1px #333;
+		box-shadow: 1px 1px 1px #333;
+		transition: opacity 0.5s ease-out;
+		vertical-align: middle;
+	}
+
+	button.scroll_trigger:hover
+	{
+		opacity: 0.9;
+	}
+
+	button.scroll_trigger:after
+	{
+		content: " [" attr(title) "]";
+		font-size: small;
+		position: fixed;
+		bottom: -5em;
+		margin: 0 0.5em;
+	}
+
+	button.scroll_trigger:hover:after
+	{
+		position: relative;
+		bottom: 0;
+		transition: bottom 0.5s ease-out;
+	}
+}
+
+
+@media (max-device-width: 600px) {
+
+	section.toc {
+		position: static;
+		width: auto;
+	}
+
+	section.toc ul > li {
+		display: inline-block;
+		border: 0;
+	}
+
+	body.double-column > article {
+		padding-left: 0;
+	}
+
+}

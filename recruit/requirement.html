@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>職員募集要項 - 採用情報 - 多摩草むらの会</title>
+	<link rel="author" href="mailto:info@kusamura.org" />
+	<link rel="stylesheet" type="text/css" href="./recruit.css" />
+	<style type="text/css">
+		ul.links {
+			margin-left: 0;
+		}
+		ul.links li {
+			display: inline-block;
+			margin-right: 1.5em;
+		}
+		/*
+		table.details tbody {
+			display: none;
+		}
+		table.details tbody:target {
+			display: table-row-group;
+		}
+		table.details tbody:target tr {
+			border-color: #030;
+		}
+		*/
+		table.details tbody {
+			margin: 1em 0;
+		}
+		table.details tbody:after {
+			display: table-row;
+			color: #CCC;
+			content: "--";
+			height: 1.5em;
+		}
+		table.details tbody:last-child:after {
+			display: none;
+		}
+		table.details tbody > tr:first-child {
+			border-top-width: 0.5em;
+		}
+		table.details th,
+		table.details td {
+			border: 1px solid #888;
+			padding: 0.5em 1em;
+		}
+		table.details th {
+			white-space: nowrap;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="/script/step_scroll.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+</head>
+<body class="double-column">
+	<header>
+		<h1>採用情報</h1>
+		<?= call_html_template('global-header-nav') ?>
+	</header>
+	<nav class="breadcrumb">
+		<a href="/">トップ</a> &rarr;
+		<a href="./">採用情報</a> &rarr;
+		<em>募集要項</em>
+	</nav>
+	<article>
+		<section class="toc">
+			<h2>メニュー</h2>
+			<nav>
+				<ul>
+					<li><a href="./">当会について</a></li>
+					<li><em>募集要項</em></li>
+					<li><a href="./apply">問合せ・応募</a></li>
+					<li><a href="./">採用情報</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="content">
+			<h2>募集要項</h2>
+			<figure style="margin-right: 1em;">
+				<img src="/images/recruit_img.jpg" />
+			</figure>
+			<p>勤務時間、休日、給与等は各事業所の業務内容に合わせて変動します。</p>
+			<p>現在募集中の職種はありません。</p>
+			<!--
+			<table class="details">
+				<tbody id="kitchen">
+					<tr>
+						<th scope="row">事業所</th>
+						<td>畑deきっちん</td>
+					</tr>
+					<tr>
+						<th scope="row">雇用形態</th>
+						<td>パート</td>
+					</tr>
+					<tr>
+						<th scope="row">業務内容</th>
+						<td>キッチン・洗い場スタッフ、ホール接客業務</td>
+					</tr>
+					<tr>
+						<th scope="row">給与</th>
+						<td>時給1013円～</td>
+					</tr>
+					<tr>
+						<th scope="row">求める人物像・<br />応募資格</th>
+						<td>未経験者歓迎 土、日、祝日勤務可能な方、ラストまで勤務可能な方歓迎</td>
+					</tr>
+					<tr>
+						<th scope="row">勤務時間</th>
+						<td>早番10時～16時　遅番17時～23時（1日4H～週3日～）</td>
+					</tr>
+					<tr>
+						<th scope="row">勤務地エリア</th>
+						<td>畑deきっちん 多摩市落合1-46-1ココリア多摩センター6Ｆ</td>
+					</tr>
+					<tr>
+						<th scope="row">待遇</th>
+						<td>制服賃与・従業員割引有り　通費支給　上限1日/1000円</td>
+					</tr>
+				</tbody>
+			</table>
+				-->
+		</section>
+	</article>
+	<footer>
+		<address>2013 &copy; NPO法人 多摩草むらの会</address>
+		<?= call_html_template('global-footer-nav') ?>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,700 @@
+@charset "utf-8";
+/*
+ 多摩草むらの会 ベーシックスタイル
+ created:
+  2009-09-30
+ modified:
+  2012-03-12
+*/
+
+
+
+/* リンク */
+a             { text-decoration: underline; }
+a:link        { color: blue; }
+a:link img    { outline: 0.25em double blue; }
+a:visited     { color: purple; }
+a:visited img { outline: 0.25em double purple; }
+a:hover,
+a:focus,
+a:active      { color: #060; }
+a:hover img,
+a:focus img,
+a:active img  { outline: 0.25em double #060; }
+a:focus,
+a:active      { outline: 1px solid #060; }
+
+a:after
+{ color: #FFF;
+  margin-left: 0.25em;
+  padding: 0.1em 0.25em;
+  vertical-align: 0.1em;
+  line-height: 1;
+  font-size: 80%;
+/*  font-weight: bold; */
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+a:link:after
+{
+	background: #009;
+	border-color: #00F;
+}
+a:visited:after
+{
+	background: #909;
+	border-color: #F0F;
+}
+a:hover:after,
+a:focus:after,
+a:active:after 
+{
+	background: #060;
+	border-color: #090;}
+
+/* PDF */
+a[type="application/pdf"]:after
+{
+	content: "PDF";
+}
+
+a[type^="image/"]:after
+{
+	content: "画像";
+}
+
+
+/* font */
+strong
+{
+	font-weight: bold;
+}
+
+pre, code, kbd, input, button, textarea
+{
+	font-family: Consolas, monospace;
+}
+
+pre em, code em, pre var, code var
+{
+	font-style: italic;
+}
+
+
+/**
+ * html5 elements box layout
+ */
+header, footer, section, article, nav, aside
+{
+	display: block;
+}
+
+
+
+/* blocks */
+address, hr
+{
+	clear: both;
+}
+
+
+
+/* phrase */
+sup, sub
+{
+	font-size: x-small;
+	line-height: 1;
+}
+
+img, big, small
+{
+	vertical-align: middle;
+}
+
+em
+{
+	color: #C00;
+	font-style: normal;
+}
+
+big
+{
+	font-size: 125%;
+	line-height: 0.8;
+}
+
+small
+{
+	font-size: 80%;
+	line-height: 1.25;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+/**
+ * 	ルビ
+ */
+ruby
+{
+	display: inline-table;
+}
+
+rt
+{
+	display: table-caption;
+	font-size: x-small;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+}
+
+rp
+{
+	display: none;
+}
+
+/**
+ * 	グローバルヘッダ
+ */
+
+
+header h1
+{
+	font-size: xx-large;
+}
+
+@media screen,tv,projection,handheld {
+	
+	header h1, article, footer, figure
+	{
+		border: 3px solid #EFD;
+		border-radius: 6px;
+		background-color: #FFF;
+		box-shadow: 6px 4.5px 3px #030;
+	}
+	
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	html
+	{
+		line-height: 1.6;
+		color: #000;
+		background-color: #006600;
+		background-image: url(images/back_sample01.jpg);
+		font-family: meiryo, sans-serif;
+	}
+	
+	body
+	{
+		max-width: 60em;
+		margin: auto;
+	}
+
+	h1,h2,h3,h4,h5,h6
+	{
+		padding: 0.1em 1.5%;
+		margin: 0.1em 0;
+		text-shadow: 0em 0em 2px #030;
+		font-weight: normal;
+	}
+	
+	section h2
+	{
+		font-size: 140%;
+		padding: 0;
+		margin: 0.125em 1.5%;
+	}
+	
+	nav
+	{
+		font-size: smaller;
+	}
+	
+	p,ul,ol,dl
+	{
+		padding: 0.5em 1.5%;
+	}
+	
+	dd,ul,ol
+	{
+		margin-left: 2em;
+	}
+	
+	blockquote
+	{
+		margin: 1em 1.5% 1em 6%;
+		border-left: 0.5em groove #9CC;
+	}
+	
+	blockquote > *:first-child
+	{
+		padding-top: 0;
+	}
+	
+	blockquote:after
+	{
+		margin: 0 1.5%;
+	}
+	
+	blockquote, q
+	{
+		color: #366;
+	}
+	
+	cite
+	{
+		color: #663;
+	}
+	
+	address
+	{
+		display: block;
+	}
+	
+	del,del *
+	{
+		color: silver !important;
+	}
+	
+	ins
+	{
+		background-color: #F0F3EC;
+		text-decoration: none;
+	}
+	
+	figure
+	{
+		max-width: 100%;
+		margin: 1em auto;
+		padding: 0.5em;
+		display: inline-block;
+		border: 1px solid #FFF;
+		border-radius: 6px;
+		box-shadow: 6px 4.5px 3px #030;
+		overflow: hidden;
+		background-color: #C60;
+		color: #FFF;
+		text-shadow: 0 0 1px #333;
+	}
+	
+	figure figcaption
+	{
+		text-align: center;
+		padding: 0.25em;
+	}
+	
+	figure>img 
+	{
+		border-radius: 6px;
+	}
+	
+	table,pre
+	{
+		margin: 0.5em auto;
+		max-width: 90%;
+	}
+	caption
+	{
+		margin-top: 0.5em;
+	}
+	th, td
+	{
+		padding: 0.25em;
+	}
+	
+	fieldset
+	{
+		padding: 0.5em 1em 1em 1em;
+		border: 1px solid #999;
+	}
+	
+	legend
+	{
+		padding: 0 0.5em;
+	}
+	
+	label:hover
+	{
+		background-color: #DDD;
+	}
+	
+	textarea
+	{
+		padding: 0.25em;
+	}
+	
+	option
+	{
+		padding: 0 0.25em;
+	}
+	
+	abbr
+	{
+		margin: 0 0.25em;
+	}
+	
+	dfn
+	{
+		color: #660;
+		letter-spacing: 0.125em;
+	}
+	
+	dfn:before,
+	dfn:after
+	{
+		content: "'";
+		font-size: smaller;
+		vertical-align: text-top;
+		margin: 0 0.125em;
+	}
+	
+	address
+	{
+		padding: 0 1.5%;
+	}
+	
+	hr
+	{
+		margin: 0.5em 1.5%;
+		border-top: 0.5em dotted #E3E3E3;
+	}
+	
+	var
+	{
+		margin: 0 1px;
+	}
+	kbd,code
+	{
+		margin: 0 0.1em;
+		padding: 0 0.2em;
+	}
+	pre
+	{
+		border-color: #ACC;
+		background-color: #FFF;
+		padding: 0.5em 1em;
+		overflow: auto;
+	}
+	pre samp,pre code,pre var
+	{
+		border-width: 0;
+		margin: 0;
+		padding: 0;
+	}
+	kbd
+	{
+		border-color: #886;
+		background-color: #ECECEA;
+	}
+	code
+	{
+		border-color: #BDD;
+	}
+	
+	/**
+	 * 	ヘッダ
+	 */
+	header h1
+	{
+		color: #000;
+		text-align: left;
+		border-bottom-left-radius: 0;
+		line-height: 1.25;
+		padding: 1em 2%;
+		margin: 0.5em 0 0;
+		background: #FFF url(images/image3037.png) no-repeat;
+		background-size: contain;
+		background-position: right bottom;
+	}
+	
+	header h1:before
+	{
+		content: "NPO法人 多摩草むらの会";
+		display: block;
+		text-align: left;
+		font-size: x-small;
+		margin: 0.5em 0.25em;
+	}
+	
+	header nav
+	{
+		margin: 0 0 1em;
+	}
+	
+	header nav *
+	{
+		padding: 0;
+		margin: 0;
+	}
+	
+	header nav > ul > li
+	{
+		text-align: center;
+		display: inline-block;
+		width: 8em;
+		margin-right: 0.5em;
+	}
+	
+	header nav > ul > li > *
+	{
+		display: block;
+		background-color: #080;
+		padding: 0.25em 0.5em;
+		text-shadow: 0 0 2px #000;
+		line-height: 1.5;
+		color: #FFF !important;
+		border: 0.1em solid #F0FFE0;
+		border-top-width: 0;
+		border-radius: 0 0 5px 5px;
+		box-shadow: 6px 4.5px 3px #030;
+	}
+	
+	header nav > ul > li > a
+	{
+		text-decoration: none;
+	}
+	
+	header nav > ul > li > *:before
+	{
+		content: "■";
+		margin-right: 0.25em;
+		color: #FFF;
+		text-shadow: 2px 2px 0 #9C6;
+	}
+	
+	header nav > ul > li:hover > *:before
+	{
+		color: #060;
+		transition-property: color;
+		transition-duration: 1s;
+		transition-timing-function: ease-out;
+	}
+	
+	header nav > ul > li > .current
+	{
+		font-weight: bold;
+		background-color: #9C6;
+	}
+	
+	header nav > ul > li > .current:before
+	{
+		text-shadow: 2px 2px 0 #FFF;
+	}
+	
+	header nav > ul > li > a:hover
+	{
+		background-color: #CF9;
+		transition-property: background-color;
+		transition-duration: 1s;
+		transition-timing-function: ease-out;
+	}
+	
+	/**
+	 * 	コンテンツ
+	 */
+	article
+	{
+		margin: 1em 0;
+		padding: 0.5em;
+		position: relative;
+		z-index: 1;
+	}
+	
+	article section
+	{
+		padding: 0.5em 0;
+	}
+	
+	article h2
+	{
+		font-size: x-large;
+		line-height: 1.25;
+		background: url(images/felt_rabbit.png) left center no-repeat;
+		background-size: 1.5em;
+		padding: 0.25em 0 0.25em 2em;
+	}
+	
+	article h3:before
+	{
+		content: "■";
+		opacity: 0.8;
+		color: #080;
+		font-size: medium;
+		display: inline-block;
+		margin-right: 0.75em;
+		vertical-align: top;
+		text-shadow: 0.25em 0.25em 0.1em #4B4;
+	}
+	
+	article:after {
+		content: "\A";
+		display: block;
+		clear: both;
+	}
+	
+	/**
+	 * 	事業所紹介
+	 */
+	.introduction article > section
+	{
+		clear: right;
+	}
+	
+	.introduction aside
+	{
+		width: 20em;
+		float: right;
+		margin: 0 1em 1em 1em;
+	}
+	
+	
+	.introduction aside dl
+	{
+		padding: 0;
+		box-shadow: 1px 1px 2px #666;
+		font-size: smaller;
+	}
+	
+	.introduction aside dt
+	{
+		padding: 0.5em;
+		background: #EFD url(images/texture2.png);
+	}
+	
+	.introduction aside dd {
+		padding: 0.5em;
+		margin: 0;
+		border-top: 1px dashed #CEB;
+		border-top: 1px dotted #AC9;
+		background: #FFF;
+	}
+	
+	article address
+	{
+		text-align: right;
+	}
+	
+	/**
+	 * 	事業所概略
+	 */
+	section.guidance
+	{
+		width: 25em;
+		float: left;
+		margin: 1em;
+	}
+	
+	section.guidance h3,
+	section.guidance dl
+	{
+		margin: 0;
+		padding: 0;
+		border: 3px double #ACA;
+	}
+	
+	section.guidance h3
+	{
+		font-weight: bold;
+		border-bottom: 0;
+		border-radius: 1em 1em 0 0;
+		text-align: center;
+		text-shadow: 1px 1px 1px #333;
+		padding: 0.5em;
+		background: url(images/back_sample02.jpg);
+	}
+	
+	section.guidance h3:before
+	{
+		content: none;
+	}
+	
+	section.guidance dl
+	{
+		border-top-width: 0;
+	}
+	
+	section.guidance dt {
+		padding: 0.5em;
+		background: #EFD url(images/texture2.png);
+	}
+	
+	section.guidance dd {
+		padding: 0.5em;
+		margin: 0;
+		border-top: 1px dashed #CEB;
+		background: #FFF;
+	}
+	
+	
+	/**
+	 * 	フッタ
+	 */
+	body > footer
+	{
+		margin-bottom: 2em;
+		padding: 0.5em 1em;
+		text-align: right;
+		background-image: url(images/bg_foot.png);
+		background-size: 10%;
+		background-repeat: repeat-x;
+		background-position: center bottom;
+		text-align: center;
+		text-shadow: 0 0 2px #666;
+	}
+	
+	footer nav li
+	{
+		display: inline;
+	}
+	
+	footer nav li
+	{
+		margin: 0 0.5em;
+	}
+	
+	footer nav li > a
+	{
+		position: relative;
+		z-index: 2;
+	}
+		
+}
+
+@media print
+{
+	h1
+	{
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+	
+	address
+	{
+		page-break-before: avoid;
+	}
+	
+	nav.global,
+	footer ul 
+	{
+		display: none;
+	}
+	
+	a[href^="http:"],
+	a[href^="https:"]
+	{
+		content: "[" attr(href) "]";
+		font-size: smaller;
+		font-family: Consolas, monospace;
+	}
+	
+	
+}
+

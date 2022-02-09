@@ -1,0 +1,11 @@
+RewriteEngine on
+
+# 日付指定をGETパラメータに変更
+RewriteRule ([0-9]{4})-(0[1-9]|1[0-2])-([0-2][0-9]|3[0-1])(?:-([0-9]))?$ index.php?datestamp=$1-$2-$3&num=$4
+
+# YYYYMMDDをYYYY-MM-DDに変換する(リダイレクト)
+RewriteCond \d{8}.pdf$ !-f
+RewriteRule ^([0-9]{4})(0[0-9]|1[0-2])([0-2][0-9]|3[0-1]).pdf$ /news/$1-$2-$3.pdf [R=301]
+
+# 社福案内pdf -> ウェブサイトへのリダイレクト
+RewriteRule ^images/greenvillage_guide.pdf$ https://social.kusamura.org/ [R=301,L]

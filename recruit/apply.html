@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>問合せ・応募 - 採用情報 - 多摩草むらの会</title>
+	<link rel="author" href="mailto:info@kusamura.org" />
+	<link rel="stylesheet" type="text/css" href="./recruit.css" />
+	<style type="text/css">
+		table {
+			margin: 0;
+			border-collapse: collapse;
+		}
+
+		table tr {
+			border: 0 solid white;
+			border-width: 0.25em 0;
+		}
+
+		tr td,
+		tr th {
+			background-color: #DDD;
+			padding: 0.5em;
+		}
+
+		table th {
+			border-width: 0;
+			text-align: left;
+			vertical-align: text-top;
+		}
+
+		table table {
+			margin: 0;
+		}
+
+		table table tr {
+			border-width: 0;
+		}
+
+		table table th,
+		table table td {
+			font-weight: normal;
+			padding: 0 1em 0 0;
+		}
+
+		fieldset {
+			border-width: 0;
+		}
+
+		legend {
+			display: none;
+		}
+
+		textarea {
+			display: block;
+			height: 8em;
+		}
+
+		input, textarea {
+			padding: 0.1em 0.25em;
+		}
+
+		input[type="checkbox"] {
+			padding: 0;
+		}
+
+		textarea,
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"] {
+			width: 20em;
+		}
+
+		input[name="age"] {
+			width: auto;
+		}
+
+		input[name="postal-code[0]"] {
+			width: 3em;
+		}
+
+		input[name="postal-code[1]"] {
+			width: 4em;
+		}
+
+		button[type="submit"] {
+			display: block;
+			margin: 1em auto;
+			padding: 0.5em;
+			width: 12em;
+			font-size: large;
+			border-width: 0;
+			border-radius: 6px;
+			background-color: #480;
+			color: white;
+		}
+
+		button[type="submit"]:hover,
+		button[type="submit"]:focus {
+			background-color: #8C0;
+			cursor: pointer;
+		}
+
+	</style>
+	<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/script/step_scroll.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+</head>
+<body class="double-column">
+<header>
+	<h1>採用情報</h1>
+	<?= call_html_template('global-header-nav') ?>
+</header>
+<nav class="breadcrumb">
+		<a href="/">トップ</a> &rarr;
+		<a href="./">採用情報</a> &rarr;
+		<em>問合せ・応募</em>
+	</nav>
+<article>
+	<section class="toc">
+		<h2>メニュー</h2>
+		<nav>
+			<ul>
+				<li><a href="./">当会について</a></li>
+				<li><a href="./requirement">募集要項</a></li>
+				<li><em>問合せ・応募</em></li>
+				<li><a href="./">採用情報</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section class="content">
+		<h2>問合せ・応募</h2>
+		<form id="ENTRY" method="post" action="entry" class="h-adr">
+			<fieldset>
+				<legend>応募フォーム</legend>
+				<p>*は必須項目です。</p>
+				<table>
+					<colgroup style="width:12em;"></colgroup>
+					<tbody>
+					<tr>
+						<th scope="row">*お名前</th>
+						<td><input name="name" type="text" placeholder="例:草村 太郎" required="required" /></td>
+					</tr>
+					<tr>
+						<th scope="row">*フリガナ</th>
+						<td><input name="ruby" type="text" placeholder="例:クサムラ タロウ" required="required" /></td>
+					</tr>
+					<tr>
+						<th scope="row">*年齢</th>
+						<td><input name="age" type="text" size="3" maxlength="2" required="required" /> 歳</td>
+					</tr>
+					<tr>
+						<th scope="row">*ご住所</th>
+						<td class="address">
+							<input type="hidden" class="p-country-name" value="Japan" />
+							<table>
+								<tbody>
+								<tr>
+									<th>郵便番号</th>
+									<td>
+										<input name="postal-code[0]" class="p-postal-code" type="text" size="3" maxlength="3" pattern="[0-9]{3}" placeholder="000" /> -
+										<input name="postal-code[1]" class="p-postal-code" type="text" size="4" maxlength="4" pattern="[0-9]{4}" placeholder="0000" />
+									</td>
+								</tr>
+								<tr>
+									<th>都道府県</th>
+									<td><input name="pref" class="p-region" type="text" required="required" /></td>
+								</tr>
+								<tr>
+									<th>市区郡</th>
+									<td><input name="city" class="p-locality" type="text" placeholder="例:○○区" required="required" /></td>
+								</tr>
+								<tr>
+									<th>町村番地</th>
+									<td><input name="town" class="p-street-address" type="text" placeholder="例:○○ 1-2-3" required="required" /></td>
+								</tr>
+								<tr>
+									<th>建物名</th>
+									<td><input name="bld" class="p-extended-address" type="text" placeholder="例:○○マンション 101号" /></td>
+								</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">*お電話番号</th>
+						<td><input name="phone" type="tel" placeholder="例:1234567890または123-456-7890" maxlength="13" pattern="[0-9]{2,3}-?[0-9]{2,4}-?[0-9]{2,4}" required="required" /></td>
+					</tr>
+					<tr>
+						<th scope="row">*メールアドレス</th>
+						<td><input name="email_adr" type="email" placeholder="例:sample@example.com" required="required" /></td>
+					</tr>
+					<tr>
+						<th scope="row">*保有資格</th>
+						<td><textarea name="license" placeholder="例:看護師" required="required"></textarea></td>
+					</tr>
+					<tr>
+						<th scope="row">*職務経歴</th>
+						<td><textarea name="history" placeholder="在籍期間・業種・職務内容などをご記入ください。" required="required"></textarea></td>
+					</tr>
+					<tr>
+						<th scope="row">ご質問その他</th>
+						<td><textarea name="question" placeholder="何かご質問があればご記入ください。"></textarea></td>
+					</tr>
+					<!--
+					<tr>
+						<th scope="row">*個人情報取扱い</th>
+						<td><input type="checkbox" value="1" required="required" /> <a href="/policy.html">個人情報取扱い</a>を確認しました　※必ずご確認下さい。</td>
+					</tr>
+					<tr>
+						<th scope="row">*送信確認</th>
+						<td><input type="checkbox" value="1" required="required" /> 上記内容を確認したらチェックしてください。</td>
+					</tr>
+					-->
+					</tbody>
+				</table>
+				<button type="submit">応募</button>
+			</fieldset>
+		</form>
+	</section>
+</article>
+<footer>
+	<address>2013 &copy; NPO法人 多摩草むらの会</address>
+	<?= call_html_template('global-footer-nav') ?>
+</footer>
+</body>
+</html>

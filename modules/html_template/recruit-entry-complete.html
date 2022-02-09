@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>問合せ・応募 - 採用情報 - 多摩草むらの会</title>
+	<link rel="author" href="mailto:info@kusamura.org" />
+	<link rel="stylesheet" type="text/css" href="./recruit.css" />
+	<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/script/step_scroll.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+</head>
+<body>
+<header>
+	<h1>採用情報</h1>
+	<?= call_html_template('global-header-nav') ?>
+</header>
+<nav class="breadcrumb">
+		<a href="/">トップ</a> &rarr;
+		<a href="./">採用情報</a> &rarr;
+		<em>問合せ・応募</em>
+	</nav>
+<article>
+	<section class="content">
+		<h2>問合せ・応募受付完了</h2>
+		<p>この度はご応募ありがとうございます。受付確認メールを送信いたしますのでご確認ください。</p>
+		<p>なお、しばらくしても受付確認メールが届かない場合は、メールアドレスが間違っているか、迷惑メールに振り分けされている可能性がありますのでご確認いただき、再度応募フォームでご応募ください。</p>
+		<section>
+			<h3>送信いただいた内容</h3>
+			<ul><?= join('', array_map(function($line){ return "<li>$line</li>"; }, $MAIL_CONTENTS)); ?></ul>
+		</section>
+	</section>
+</article>
+<footer>
+	<address>2013 &copy; NPO法人 多摩草むらの会</address>
+	<?= call_html_template('global-footer-nav') ?>
+</footer>
+</body>
+</html>
