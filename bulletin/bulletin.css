@@ -1,0 +1,46 @@
+@import url(../style/basic.css);
+
+section + section {
+    border-top: 4px dotted #484;
+}
+q {
+    quotes: none;
+}
+
+.q_and_a {
+    margin: 0;
+}
+.q_and_a > dt {
+    background-image: none;
+    padding-left: 0;
+}
+.q_and_a > dd {
+    margin-left: 0;
+}
+
+.q_and_a > dt:before {
+    content: "Q: ";
+}
+
+.q_and_a > dd:before {
+    content: "A: ";
+}
+
+#director img {
+   float: left; 
+}
+
+.topics > section > section {
+    clear: both;
+}
+
+.to-be-continued {
+    quotes: "＜" "＞";
+    font-style: italic;
+}
+.to-be-continued:before {
+    content: open-quote;
+}
+.to-be-continued:after {
+    content: close-quote;
+}
